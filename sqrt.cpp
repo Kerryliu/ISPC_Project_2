@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <random>
 #include <chrono>
@@ -6,7 +7,7 @@
 
 using namespace std;
 
-static const int size = 15;
+static const int size = 15000000;
 static const int repetitionss = 5;
 void randFillArr(int size, float* arr);
 void printArr(int size, float* numArr, float* outArr);
@@ -39,11 +40,14 @@ void randFillArr(int size, float* arr) {
 }
 
 void printArr(int size, float* numArr, float* outArr) {
-  if(size < 50) {
-    for(int i = 0; i < size; i++) {
-      cout << numArr[i] << "  " << outArr[i] << "  " << sqrt(numArr[i]) << endl;
-    }
+  if(size <= 100) {
     cout << endl;
+    cout << setw(15) << left << "numArr:" << setw(15) 
+      << left << "outArr:" << setw(15) << "sqrtCPP:" << endl;
+    for(int i = 0; i < size; i++) {
+      cout << setw(15) << left << numArr[i] << setw(15) << left 
+        << outArr[i] << setw(15)<< sqrt(numArr[i]) << endl;
+    }
   }
 }
 
