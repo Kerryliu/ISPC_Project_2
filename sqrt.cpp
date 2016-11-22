@@ -72,7 +72,7 @@ void benchmarkSeq(int size, float* numArr, float* outArr, int reps) {
     meow[i] = difference;
   }
   double average = accumulate(meow.begin(), meow.end(), 0.0)/ meow.size();
-  cout << "Squential sqrt average time: " << average 
+  cout << "Sequential sqrt average time: " << average 
     << " microseconds" << endl;
 }
 
