@@ -1,6 +1,8 @@
 # ISPC_Project_2
-To run sequential and ISPC: `make squareRoot`
+Simple programs that use ISPC to parallelize calculations.  
 
-To run sequential and AVX: `make squareRootAVX`
+- To run sequential and ISPC: `make squareRoot`
+
+- To run sequential and AVX: `make squareRootAVX`
 
 To clean: `make clean`
